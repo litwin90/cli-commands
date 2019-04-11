@@ -42,6 +42,8 @@
 **git branch**  -- выводит список бранчей  
 **git branch branchName**  -- создает новый бранч  
 **git branch -d branchname** -- удаляет указанный бранч  
+**git branch -m oldname newname** -- переименовать локальный бранч  
+**git branch -m newname** -- переименовать текущий локальный бранч  
 **git checkout branchName** -- пересесть на указанный бранч  
 **git merge branchName** -- дополнить данную ветвь изменениями в указанной  
 **git rebase branchName** -- дополнить данную ветвь изменениями в указанной  
