@@ -53,6 +53,7 @@
 **git pull origin master** -- мержит и фетчит репозиторий с ремоутом  
 **git remote set-url origin git@github.com:vicman-wi/wi-backend.git** -- изменяет юрл ремоута  
 **git config core.editor "code --wait"**  -- установить по умалчинию в качестве эдитора вскод  
+**git config --global --edit** -- открыть на редактирование глобальные настройки
 
 
 # ПЕРЕПИСАТЬ СТАРЫЕ КОМИТЫ:
