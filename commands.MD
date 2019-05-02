@@ -127,6 +127,6 @@ Vim
 **ng new my-app** - создать новый проект  
 **ng serve --open** - запустить проект и открыть в браузере  
 **ng g c other-component** (ng generate component my-component) - сгенерировать новый компонент  
-**ng g module module-name** - create new module
-**ng g component module-name/component-name** -- create new component belong to signed module
+**ng g module module-name** - create new module  
+**ng g component module-name/component-name** -- create new component belong to signed module  
 **ng g interface module-name/interface-name** -- create new interface inside specific module
