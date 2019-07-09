@@ -12,17 +12,18 @@
 **rm fle.txt** -- удалить указанный файл  
 **type NUL > 1.txt** -- создает файл в данной папке
 
-# Git:
+# Git base comands:
+
+![Git](1.png)
 
 **Workspase ---> Index ----> Repositiry ----> RemoteRepository**  
 **git init** -- создать пустой Git репозиторий или реинициализировать сущестыующий  
 **git clone URL(or SSH key)** -- клонирует существующий репозиторий с гитхаб на локалку  
-**git config** -- получает или устанавливает глобальные настройки  
-**git congig --list** -- список всех глобальных настроек  
-**git config --global -e** -- открыть глоб настройки на редактирование  
-**git config --global alias.c config** -- test/change:remove .READMY.md"  
-**git add .** -- добавить все изменения в Indeопределяем алиас для config -- c  
+**git add .** -- добавить все изменения 
 **git status** -- выводит инфу о изменениях в рабочей области  
+
+## Git commit:  
+
 **git commit** -- добавляет изменения в Index  
 **git commit -m "Messege"** -- добавляет изменения в индекс с сообщением Messege  
 **git commit --author='authorName' --date='dateNow'** -- коммит с указанием фвтора и даты(если он отличается)  
@@ -32,30 +33,62 @@
 **git commit --amend --no-edit** -- без редактирование месенджа  
 **git show**-- инфа о последнем коммите  
 **git show a588** -- инфа о комите с уникальным числом начинающимся с указаннного  
-**git reset HEAD file.txt** -- откатываем из индекса добавление file.txt в рабочую зону  
-**git remote** -- выводит все origns (ссыла на репозиторий на гитхаб)  
-**git push origin master** -- отправить изменения на RemoteRepository(ссылка origin) мспользуя бранч master  
 **git log** -- просмотреть историю комитов  
 **git log --pretty=oneline** -- посмотреть комиты в строчку  
 **git revert a3454...** -- откатываемся к оппределенному коммиту (запушенные изменения)  
-**git checkout file.txt** --удаляет изменение из worckspase (незакомиченные которые не в индексе(не add!))  
-**git checkout HEAD file.txt** -- удаляет из индекса указанный файл(данные изменения удаляются)  
+
+## Git config: 
+
+**git config** -- получает или устанавливает глобальные настройки  
+**git congig --list** -- список всех глобальных настроек  
+**git config --global -e** -- открыть глоб настройки на редактирование  
+**git config --global alias.c config** -- test/change:remove .READMY.md"  
+**git config core.editor "code --wait"** -- установить по умалчинию в качестве эдитора вскод  
+**git config --global --edit** -- открыть на редактирование глобальные настройки   
+
+## Git branch: 
+
 **git branch** -- выводит список бранчей  
 **git branch branchName** -- создает новый бранч  
 **git branch -d branchname** -- удаляет указанный бранч  
 **git branch -m oldname newname** -- переименовать локальный бранч  
 **git branch -m newname** -- переименовать текущий локальный бранч  
 **git checkout branchName** -- пересесть на указанный бранч  
+
+## Git work with files:  
+
+**git checkout file.txt** -- удаляет изменение только из worckspase  
+**git checkout HEAD file.txt** -- удаляет из worckspase **&** индекса изменения указанного файла 
+
+**git reset HEAD file.txt** -- откатываем из индекса добавление file.txt в рабочую зону  
+**git reset --soft HEAD^** or  
+**git reset --soft HEAD~1** -- отменяем последний комит и оставляем все изменения в индексе  
+**git reset --hard HEAD~** -- раскомитить последний комит **изменения комита не вернутся в индекс, пропадут!**   
+**git reset --hard ORIG_HEAD** -- откатить ребейз  
+
+
+## GIT STASH:
+
+**git stash** -- застешеть ченджи
+**git stash save “stash name”** -- засташеть с определенным именем  
+**git stash save -u**  
+or  
+**git stash save --include-untracked** -- застешенть вместе с антрекд файлами  
+**git stash list** -- список стешей  
+**git stash apply** -- применить последний стеш (0)  
+**git stash apply stashId** -- применить стеш с определенным номером  
+**git stash clear** -- удалить все стеши  
+**git stash drop stashId** -- удалить определенный стеш  
+
+## Git other: 
+
+**git remote** -- выводит все origns (ссыла на репозиторий на гитхаб)  
+**git push origin master** -- отправить изменения на RemoteRepository(ссылка origin) мспользуя бранч master    
 **git merge branchName** -- дополнить данную ветвь изменениями в указанной  
-**git rebase branchName** -- дополнить данную ветвь изменениями в указанной  
-**git reset --hard ORIG_HEAD** -- откатить ребейз
-**git branch -d branchName** -- удалить указанный бранч  
+**git rebase branchName** -- дополнить данную ветвь изменениями в указанной 
 **git fetch** -- подтягивает инфу с ремоута(если совпадает история комитов на локалке и ремоуте)????  
 **git pull origin master** -- мержит и фетчит репозиторий с ремоутом  
 **git remote set-url origin git@github.com:vicman-wi/wi-backend.git** -- изменяет юрл ремоута  
-**git config core.editor "code --wait"** -- установить по умалчинию в качестве эдитора вскод  
-**git config --global --edit** -- открыть на редактирование глобальные настройки
-**git reset --hard HEAD~** -- раскомитить последний комит изменения вернутся в индекс, не пропадут!
 
 # ПЕРЕПИСАТЬ СТАРЫЕ КОМИТЫ:
 
