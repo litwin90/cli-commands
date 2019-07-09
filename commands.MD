@@ -58,7 +58,9 @@
 ## Git work with files:  
 
 **git checkout file.txt** -- удаляет изменение только из worckspase  
-**git checkout HEAD file.txt** -- удаляет из worckspase **&** индекса изменения указанного файла 
+**git checkout \*** -- удаляет все изменения из воркспейс  
+**git checkout HEAD file.txt** -- удаляет из worckspase **&** индекса изменения указанного файла   
+**git checkout HEAD \*** -- удаляет из worckspase **&** индекса все изменения
 
 **git reset HEAD file.txt** -- откатываем из индекса добавление file.txt в рабочую зону  
 **git reset --soft HEAD^** or  
