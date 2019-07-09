@@ -69,7 +69,7 @@
 
 ## GIT STASH:
 
-**git stash** -- застешеть ченджи
+**git stash** -- застешеть ченджи  
 **git stash save “stash name”** -- засташеть с определенным именем  
 **git stash save -u**  
 or  
